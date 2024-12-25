@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color-picker">
+        <div class="color-display" id="colorDisplay"></div>
+        
+        <div class="tabs">
+            <button class="tab active" data-mode="rgb">RGB</button>
+            <button class="tab" data-mode="hsl">HSL</button>
+        </div>
+
+        <div id="rgbControls">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Red</span>
+                    <span id="redValue">0</span>
+                </div>
+                <input type="range" min="0" max="255" value="0" class="slider red" id="redSlider">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Green</span>
+                    <span id="greenValue">0</span>
+                </div>
+                <input type="range" min="0" max="255" value="0" class="slider green" id="greenSlider">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Blue</span>
+                    <span id="blueValue">0</span>
+                </div>
+                <input type="range" min="0" max="255" value="0" class="slider blue" id="blueSlider">
+            </div>
+        </div>
+
+        <div id="hslControls" style="display: none;">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Hue</span>
+                    <span id="hueValue">0°</span>
+                </div>
+                <input type="range" min="0" max="360" value="0" class="slider" id="hueSlider">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Saturation</span>
+                    <span id="satValue">0%</span>
+                </div>
+                <input type="range" min="0" max="100" value="0" class="slider" id="satSlider">
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Lightness</span>
+                    <span id="lightValue">0%</span>
+                </div>
+                <input type="range" min="0" max="100" value="0" class="slider" id="lightSlider">
+            </div>
+        </div>
+
+        <div class="color-codes">
+            <div class="color-code">
+                <span>HEX:</span>
+                <span id="hexCode">#000000</span>
+            </div>
+            <div class="color-code">
+                <span>RGB:</span>
+                <span id="rgbCode">rgb(0, 0, 0)</span>
+            </div>
+            <div class="color-code">
+                <span>HSL:</span>
+                <span id="hslCode">hsl(0, 0%, 0%)</span>
+            </div>
+            <button class="copy-button" id="copyButton">Copy Color Code</button>
+        </div>
+    </div>
+
+    <script src="app.js">
+    </script>
+</body>
+</html>
