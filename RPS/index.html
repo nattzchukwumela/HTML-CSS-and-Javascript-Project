@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+   <title>ROCK | PAPER | SCISSORS</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Rock, Paper, Scissors" />
+  <meta property="og:image" content="game.jpg" />
+  <meta property="og:descriptive" content="Play a classic game of rock paper scissors with the computer! Choose your weapon and see who comes out top." />
+  <link rel="icon" type="image/x-icon" href="./favicon/rock1.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#2196f3" >
+  </head>
+  <body>
+    <main id="main">
+      <!-- start game button -->
+    <button id="startGame">
+      Start Game! 🎮🕹️
+    </button>
+    
+    <!-- popup boxes elements below -->
+       <div id="popup-box">
+      <div class="popup" id="popup">
+        <h3>Please Enter Your Name</h3>
+        <div id="input-box">
+        Name:<input type="text" placeholder="Enter name here" id="name-input" value="" /></div>
+        <div>
+        <button class="btn" id="true" >OK</button>
+        <button class="btn" id="false" >Cancel</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- second popup box-->
+    
+    <div id="popup-box-2" class="popup">
+      <div>
+        <h3 id="winner"> - </h3>
+      <p id="note"> Play again?</p>
+      <button class="btn" id="btnReplay" >Retry</button>
+      <button class="btn" id="quit">Quit</button>
+      </div>
+    </div>
+    
+    <!-- third popup box -->
+    
+    <div id="popup-box-3" class="popup">
+      <div>
+      <h3>Thanks for playing!</h3>
+      <button class="btn" id="ok" >OK</button>
+      </div>
+    </div>
+    
+    <!-- fourth popup box for installation -->
+
+
+     <button class="btn" id="install-button">Install</button>
+   
+
+    <!-- gamebox with all game elemnts below -->
+    <div id="gameBox">
+      <div id="computerBox" >
+       <button class="weapon wip1" value="ROCK">ROCK</button>
+       <button class="weapon wip2" value="PAPER">PAPER</button>
+       <button class="weapon wip3" value="SCISSORS">SCISSORS</button>
+      </div>
+      <div id="stats-box">
+        <div class="block">
+          <p id="computerPoints">Computer: 0</p>
+          <p id="computerArsenal">Arsenal</p>
+          </div>
+          <hr />
+          <p id="result"> Results </p>
+          <hr />
+        <div class="block">
+        <p id="playerArsenal">Arsenal</p>
+        <p id="playerPoint" contenteditable>Player: 0</p>
+        </div>
+      </div>
+      <div id="playerBox">
+       <button class="playerWeapon" value="ROCK">ROCK</button>
+       <button class="playerWeapon" value="PAPER">PAPER</button>
+       <button class="playerWeapon" value="SCISSORS">SCISSORS</button>
+      </div>
+    </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+  <footer>
+  </footer>
+</html>

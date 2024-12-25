@@ -1,0 +1,208 @@
+ /**
+  * This CSS file defines the styles for the main layout, popup boxes, and game elements of the application.
+  * 
+  * The main layout includes a full-width and height main element with a centered content area. The popup boxes
+  * are positioned absolutely and can be displayed or hidden with transitions. The game elements include a game
+  * box with player and computer weapon displays, and a start game button.
+  * 
+  * The file also includes some utility styles like a shake animation for form validation, and media queries
+  * for responsive design.
+  */
+ *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  }
+body {
+  width: 100%;
+  height: auto;
+  }
+main {
+   width: 100%;
+   height: 100vh;
+   position: relative;
+   text-align: center;
+   background: #bbdefb;
+   border: 2px solid steelblue;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+  
+  /* the code below styles the popup boxes */
+  .popup {
+   background: #333;
+   border-radius: 6px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0.1);
+   text-align: center;
+   padding: 0 30px 30px;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   visibility: hidden;
+   transition: transform 0.5s;
+ }
+ .display-popup {
+   visibility: visible;
+   transform:  translate(-50%, -50%) scale(1);
+ }
+ #popup {
+   width: 300px;
+   height: 200px;
+   background: #333;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+ }
+  #popup h3 {
+   margin-bottom: 10px;
+ }
+ #input-box {
+   font-size: 1em;
+   width: 250px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .popup #name-input {
+   width: 150px;
+   height: 25px;
+   margin-left: 10px;
+   border: 1px solid steelblue;
+   border-radius: 5px;
+   padding: 5px;
+ }
+  #popup-box-2 {
+   height: 130px;
+   width: 250px;
+   padding: 10px;
+ }
+ 
+ #popup-box-3 h3 {
+   position: relative;
+   top: 10px;
+ }
+ 
+ #winner, p, .btn {
+   margin-top: 5px;
+ }
+ 
+ /* this code styles the buttons inside the popup boxes */
+ .btn {
+   padding: 5px;
+   background: #6fd649;
+   border: 0;
+   width: 80px;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 500;
+   border-radius: 5px;
+   margin: 0 5px;
+   transform: translateY(20px);
+ }
+  
+  
+ /* the gameBox styling goes down here */
+ 
+ #gameBox {
+   background: #82b1ff;
+   width: 400px;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid blue;
+   border-radius: 5px;
+   transform: scale(0.1);
+   visibility: hidden;
+   transition: transform 0.5s;
+ }
+ 
+ .gameBox-popup {
+   visibility: visible;
+   transform: scale(1);
+ }
+ .blocks {
+   display: block;
+ }
+  /* computer weapon styling */
+  .weapon {
+    background: #fe3f4d;
+    width: auto;
+    height: 30px;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 700;
+  }
+  /* computer weapon styling */
+  .playerWeapon {
+    background: #fe903f;
+    width: auto;
+    height: 30px;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 700;
+    transition: outline 0.5s;
+    cursor: pointer;
+  }
+  .playerWeapon:hover {
+    outline: 3px solid #78b5ff;
+  }
+  
+  /* start game button styling below */
+  #startGame {
+      border: 1.5px solid #3071c99b;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:#30abc9ab;
+      font-size: 20px;
+      border-radius: 5px;
+      height: 40px;
+      padding: 3px 5px;
+      margin: 0 auto;
+      cursor: pointer;
+     }
+  
+ /* the code below will create a shake animation. this class will be called when ever the javascript code detects that theres no input in the name-input */
+ .error {
+   animation: shake 0.1s linear 10;
+   outline: 1px solid red;
+ }
+ @keyframes shake{
+   0%{
+     transform: translateX(0);
+   }
+   25%{
+     transform: translateX(-3px);
+   }
+   50%{
+     transform: translateX(0);
+   }
+   75%{
+     transform: translateX(-3px);
+   }
+   100%{
+     transform: translateX(0);
+   }
+ }
+ 
+ @media (max-width: 760px) {
+   #gameBox {
+   width: 350px;
+   height: 250px;
+   }
+ }
