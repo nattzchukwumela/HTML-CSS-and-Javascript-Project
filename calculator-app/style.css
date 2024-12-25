@@ -1,0 +1,76 @@
+ /* Basic reset and body styling */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator container styling */
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Display styling */
+.display {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 24px;
+    min-height: 60px;
+}
+
+/* Button grid styling */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Individual button styling */
+button {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #888;
+}
+
+/* Operator button styling */
+button.operator {
+    background-color: #ff9500;
+}
+
+button.operator:hover {
+    background-color: #ffaa33;
+}
+
+/* Clear and equals button styling */
+button.clear {
+    background-color: #ff3b30;
+}
+
+button.equals {
+    background-color: #34c759;
+    grid-column: span 2;
+}
