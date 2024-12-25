@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Password Generator</h1>
+        
+        <div class="password-display">
+            <input type="text" id="passwordOutput" class="password-box" readonly>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label>Password Length: <span id="lengthValue">12</span></label>
+                <input type="range" id="lengthSlider" class="range-slider" min="8" max="32" value="12">
+            </div>
+
+            <div class="option-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Uppercase Letters (A-Z)</label>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Lowercase Letters (a-z)</label>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Numbers (0-9)</label>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Special Characters (!@#$%^&*)</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="strength-meter">
+            <label>Password Strength</label>
+            <div class="strength-bar">
+                <div id="strengthFill" class="strength-fill"></div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="generateBtn" class="btn generate-btn">Generate</button>
+            <button id="copyBtn" class="btn copy-btn">Copy</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Password copied to clipboard!</div>
+    <script src="app.js">
+    </script>
+</body>
+</html>
