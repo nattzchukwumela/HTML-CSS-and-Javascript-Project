@@ -4,6 +4,7 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
+    overflow-y: hidden;
 }
 
 /* Style for the input container */
@@ -20,21 +21,48 @@ body {
     font-size: 16px;
 }
 
+/* to do item list */
+#todoList {
+    max-height: 432px;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* Custom scrollbar styles */
+#todoList::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+#todoList::-webkit-scrollbar-thumb {
+    background-color: steelblue; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+}
+
+#todoList::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
 /* Style for buttons */
 button {
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: red;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: 900;
 }
 
+.btn-add {
+    background: green;
+}
 /* Style for todo items */
 .todo-item {
     display: flex;
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    margin-top: 10px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Style for completed tasks */

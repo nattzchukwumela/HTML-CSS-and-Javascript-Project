@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>To-Do List</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>To-Do List</title>
    <link rel="stylesheet" href="style.css">
    <meta name="theme-color" content="#4A90E2">
    <link rel="manifest" href="/manifest.json">
    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
+   <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+   <link rel="manifest" href="./favicon_io/site.webmanifest">
 </head>
 <body>
     <!-- Main container for the todo app -->
@@ -18,7 +19,7 @@
     <!-- Input section for new todos -->
     <div class="input-container">
         <input type="text" id="todoInput" placeholder="Add a new task">
-        <button onclick="addTodo()">Add</button>
+        <button class="btn-add" onclick="addTodo()">Add</button>
     </div>
     
     <!-- Container for todo items -->
