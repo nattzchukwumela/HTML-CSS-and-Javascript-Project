@@ -1,5 +1,10 @@
 // Array to store todo items
-let todos = [];
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+// Function to save todos to local storage
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
 
 // Function to add a new todo
 function addTodo() {
@@ -19,6 +24,9 @@ function addTodo() {
     // Add to todos array
     todos.push(todo);
     
+    // Save to local storage
+    saveTodos();
+    
     // Clear input
     input.value = '';
     
@@ -31,12 +39,22 @@ function toggleTodo(id) {
     todos = todos.map(todo => 
         todo.id === id ? {...todo, completed: !todo.completed} : todo
     );
+    
+    // Save to local storage
+    saveTodos();
+    
+    // Update display
     renderTodos();
 }
 
 // Function to delete a todo
 function deleteTodo(id) {
     todos = todos.filter(todo => todo.id !== id);
+    
+    // Save to local storage
+    saveTodos();
+    
+    // Update display
     renderTodos();
 }
 
@@ -80,3 +98,7 @@ document.getElementById('todoInput').addEventListener('keypress', function(e) {
         addTodo();
     }
 });
+
+// Initial render of todos from local storage
+renderTodos();
+
